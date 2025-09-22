@@ -21,13 +21,13 @@ import java.util.UUID;
 public class Favorito {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+    private Long id;
 
     @Column(name = "usuario_id", nullable = false)
-    private UUID usuarioId;
+    private Long usuarioId;
 
     @Column(name = "filme_id", nullable = false)
-    private UUID filmeId;
+    private Long filmeId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "usuario_id", insertable = false, updatable = false)
